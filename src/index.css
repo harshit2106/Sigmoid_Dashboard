@@ -1,13 +1,82 @@
 body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-new {
+  background-color: #e3f2fd;
+  height: 10vh;
 }
+
+.highlight {
+  color: #573BFF
+}
+
+.bg-theme-btn {
+  background-color: #573BFF;
+}
+
+.bg-theme-btn:hover {
+  background-color: #3e26c4;
+}
+
+.analytics-height {
+  height: 90vh;
+  width: 95vw;
+}
+
+.table-height {
+  height: 18rem;
+  width: 30rem
+}
+
+.pie-height {
+  height: 13rem;
+  width: 30rem
+}
+
+.bar-height {
+  height: 18rem;
+  width: 35rem;
+
+}
+
+.dates {
+  height: 13rem;
+  width: 35rem
+}
+
+.overflow-x {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.shadow-box {
+  box-shadow: 0 0 5px #ccc;
+}
+
+.logout:hover {
+  color: #573BFF;
+  cursor: pointer;
+}
+
+/* .logout */
+.white-space-nowrap {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 330px) {
+
+  .short-font {
+    font-size: 0.7rem;
+  }
+}
+
+/* .position {
+  position: fixed;
+  left: 0;
+  right: 0;
+} */
