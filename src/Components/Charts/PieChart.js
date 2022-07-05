@@ -77,9 +77,7 @@ const PieChart = ({ startDate, endDate }) => {
   };
 
   useEffect(() => {
-    if (pieChartData.length === 0) {
-      dispatch(getPieData(data));
-    }
+    dispatch(getPieData(data));
     // eslint-disable-next-line
   }, []);
   useEffect(() => {

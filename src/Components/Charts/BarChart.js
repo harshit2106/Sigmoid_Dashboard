@@ -75,9 +75,7 @@ const BarChart = ({ startDate, endDate }) => {
   };
 
   useEffect(() => {
-    if (barChartData.length === 0) {
-      dispatch(getBarChartData(data));
-    }
+    dispatch(getBarChartData(data));
     // eslint-disable-next-line
   }, []);
   useEffect(() => {

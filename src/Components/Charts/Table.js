@@ -56,9 +56,7 @@ const Table = ({ startDate, endDate }) => {
   };
 
   useEffect(() => {
-    if (tableData.length === 0) {
-      dispatch(getTableData(data));
-    }
+    dispatch(getTableData(data));
     // eslint-disable-next-line
   }, []);
 

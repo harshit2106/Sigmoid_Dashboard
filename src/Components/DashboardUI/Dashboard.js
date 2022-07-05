@@ -31,7 +31,8 @@ const Dashboard = () => {
   };
   return (
     <div className="container-fluid">
-      <div className="row full-height">
+      <div className="row ">
+        {/* <div className="row full-heigh"> */}
         <div className="col-md-1 bg-white">
           <div className="m-3">
             <img

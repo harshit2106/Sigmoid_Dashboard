@@ -31,7 +31,7 @@ const Analytics = () => {
       navigate("/dashboard/date-range-picker");
     }
     // eslint-disable-next-line
-  }, [startDate, endDate]);
+  }, [getData]);
 
   const clickHandler = () => {
     navigate("/dashboard/date-range-picker");
@@ -41,13 +41,13 @@ const Analytics = () => {
       {getData && (
         <div className="analytics-height d-flex flex-column justify-content-center align-items-center overflow-x">
           <div className=" d-flex  ">
-            <div className="mr-3 p-2 bar-height shadow-bo  bg-white">
+            <div className="card-hover mr-3 p-2 bar-height bg-white">
               <BarChart
                 startDate={startDate.toString()}
                 endDate={endDate.toString()}
               />
             </div>
-            <div className="shadow-bo table-height bg-white p-2  overflow-auto">
+            <div className=" card-hover table-height bg-white p-2  overflow-auto">
               <Table
                 startDate={startDate.toString()}
                 endDate={endDate.toString()}
@@ -55,15 +55,15 @@ const Analytics = () => {
             </div>
           </div>
 
-          <div className="d-flex ">
-            <div className="shadow-bo  pie-height bg-white p-3 mt-3 mr-3 ">
+          <div className="d-flex mt-3">
+            <div className=" card-hover  pie-height bg-white p-3  mr-3 ">
               <PieChart
                 startDate={startDate.toString()}
                 endDate={endDate.toString()}
               />
             </div>
-            <div className="dates bg-white p-2 mt-3 d-flex flex-column justify-content-around align-items-center">
-              <h5>user : Sigmoid</h5>
+            <div className="card-hover dates bg-white p-2 d-flex flex-column justify-content-around align-items-center">
+              <h5>User : Sigmoid</h5>
               <h6>
                 Showing Data from{" "}
                 <span className="highlight">
