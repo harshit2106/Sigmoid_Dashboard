@@ -1,4 +1,4 @@
-import { CLEAR_ERROR } from "../Constants/AuthConstant";
+import { CLEAN_UP, CLEAR_ERROR } from "../Constants/AuthConstant";
 import {
   BAR_CHART_FAIL,
   BAR_CHART_LOADING,
@@ -33,6 +33,9 @@ export const BarChartReducer = (state = { barChartData: [] }, action) => {
         error: action.payload,
       };
 
+    case CLEAN_UP:
+      return { barChartData: [] };
+
     case CLEAR_ERROR:
       return {
         ...state,
@@ -64,6 +67,8 @@ export const TableReducer = (state = { tableData: [] }, action) => {
         loading: false,
         error: action.payload,
       };
+    case CLEAN_UP:
+      return { tableData: [] };
 
     case CLEAR_ERROR:
       return {
@@ -96,6 +101,8 @@ export const pieChartReducer = (state = { pieChartData: [] }, action) => {
         loading: false,
         error: action.payload,
       };
+    case CLEAN_UP:
+      return { pieChartData: [] };
 
     case CLEAR_ERROR:
       return {

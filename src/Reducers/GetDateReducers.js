@@ -1,4 +1,4 @@
-import { CLEAN_UP, CLEAR_ERROR } from "../Constants/AuthConstant";
+import { CLEAR_ERROR } from "../Constants/AuthConstant";
 import {
   GET_DATE_RANGE_FAIL,
   GET_DATE_RANGE_LOADING,
@@ -28,8 +28,6 @@ export const getDateReducer = (state = {}, action) => {
     case CLEAR_ERROR:
       return { ...state, error: null };
 
-    case CLEAN_UP:
-      return {};
     default:
       return state;
   }

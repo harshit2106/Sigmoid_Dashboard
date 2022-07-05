@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { cleanUp } from "../../Actions/AuthAction";
 import BarChart from "../Charts/BarChart";
 import PieChart from "../Charts/PieChart";
 import Table from "../Charts/Table";
@@ -16,6 +18,7 @@ const Analytics = () => {
     endDate = Date.parse(getSelectedDates.endDate);
     startDate = Date.parse(getSelectedDates.startDate);
   }
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!getData) {
@@ -30,6 +33,10 @@ const Analytics = () => {
       });
       navigate("/dashboard/date-range-picker");
     }
+
+    return () => {
+      dispatch(cleanUp());
+    };
     // eslint-disable-next-line
   }, [getData]);
 
