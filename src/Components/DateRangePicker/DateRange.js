@@ -53,7 +53,7 @@ const DateRange = () => {
 
     if (error === "Unauthorised Attempt, Session Expired") {
       dispatch(logout());
-      navigate("/");
+      navigate("/login");
     }
 
     if (success) {

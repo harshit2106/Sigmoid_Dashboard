@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   const logOut = () => {
     dispatch(logout());
-    navigate("/");
+    navigate("/login");
   };
   return (
     <div className="container-fluid">
